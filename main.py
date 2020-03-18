@@ -91,6 +91,7 @@ def draw_set(set,dom):
     
     dom.set_content("Text",set[0]["date"] + " - " + set[len(set)-1]["date"])
     
+
 def get_relat(absol):
     relat = []
     
@@ -99,11 +100,11 @@ def get_relat(absol):
         
     return relat
 
+
 def draw(dom):
     contents = dom.getContents(["Code", "Cible", "Relatif"])
     
     absol = fill(data,contents["Code"],contents["Cible"])
-    
     
     draw_set(get_relat(absol) if contents["Relatif"] == "true" else absol,dom)
 
@@ -113,7 +114,8 @@ def a_connect(dom):
     
     draw(dom)
     
-callbacks = {
+
+	callbacks = {
 	"": a_connect,
 	"Redraw": lambda dom : draw(dom)
 }
