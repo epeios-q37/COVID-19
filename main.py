@@ -115,7 +115,7 @@ def a_connect(dom):
     draw(dom)
     
 
-	callbacks = {
+callbacks = {
 	"": a_connect,
 	"Redraw": lambda dom : draw(dom)
 }
