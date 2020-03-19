@@ -62,7 +62,8 @@ def fill(data,code,key):
     
     for item in data:
         if item["code"] == code:
-            set.append({"date": item["date"], "value": item[key]})
+		if key in item:
+            		set.append({"date": item["date"], "value": item[key]})
                        
     return set
 
