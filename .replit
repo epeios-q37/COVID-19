@@ -1,2 +1,2 @@
 language = "bash"
-run = "export ATK=REPLit;python3 main.py"
+run = "ATK=none python3 main.py"
